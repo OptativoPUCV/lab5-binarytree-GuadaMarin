@@ -88,6 +88,19 @@ TreeNode * minimum(TreeNode * x){
 
 
 void removeNode(TreeMap * tree, TreeNode* node) {
+    TreeNode * replace = NULL;
+    if(node->left == NULL || node->right == NULL){
+        replace= (node->left !=NULL) ? node->left : node->right;
+        if(replace)replace->parent = node->parent;
+        if(node->parent == NULL){
+            tree->root = replace;
+        }
+        else if(node == node->parent->left){
+            node->parent->left= replace;
+        }
+        else
+        
+    }
 
 }
 
