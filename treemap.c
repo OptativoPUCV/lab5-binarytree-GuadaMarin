@@ -100,10 +100,11 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         }
         else
             node->parent->right= replace;
-    }
-    free(node->pair);
+        free(node->pair);
         free(node);
-    } else {
+    }
+        
+    else {
         struct TreeNode * successor = minimum(node->right);
         node->pair->key = successor->pair->key;
         node->pair->value = successor->pair->value;
