@@ -150,3 +150,28 @@ Sat 11 May 2024 10:38:40 PM UTC:
  tests:  25|1
 total_score: 60/70
 0dc0287
+Sat 11 May 2024 10:49:41 PM UTC: 
+ treemap.c | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:150:51: error: expected ‘)’ before ‘{’ token
+  150 |         if(!tree->lower_than(key, node->pair->key){
+      |           ~                                       ^
+      |                                                   )
+treemap.c:150:9: note: ‘-Wmisleading-indentation’ is disabled from this point onwards, since column-tracking was disabled due to the size of the code/headers
+  150 |         if(!tree->lower_than(key, node->pair->key){
+      |         ^~
+treemap.c:150:9: note: adding ‘-flarge-source-files’ will allow for more column-tracking support, at the expense of compilation time and memory
+test.c:606:1: error: expected declaration or statement at end of input
+  606 | }
+      | ^
+test.c:606:1: error: expected declaration or statement at end of input
+In file included from test.c:4:
+treemap.c:148:16: error: unused variable ‘ub’ [-Werror=unused-variable]
+  148 |     TreeNode * ub= NULL;
+      |                ^~
+test.c:607: error: control reaches end of non-void function [-Werror=return-type]
+cc1: all warnings being treated as errors
+Compilation failed
+e431e7b
